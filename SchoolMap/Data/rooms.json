@@ -6,276 +6,251 @@
   ],
   "rooms": [
     {
-      "id": 1, "name": "3 Férfi WC", "description": "Földszinti férfi mosdó.",
+      "id": 1, "name": "005 Férfi WC", "description": "Földszinti férfi mosdó.",
       "floor": 0, "building": "A", "category": "Mosdo",
-      "x": 0, "y": 360, "width": 65, "height": 55, "icon": "🚹"
+      "x": 10, "y": 10, "width": 80, "height": 75, "icon": "🚹"
     },
     {
-      "id": 2, "name": "5 Tanterem", "description": "Földszinti tanterem.",
-      "floor": 0, "building": "A", "category": "Tanterem",
-      "x": 70, "y": 280, "width": 90, "height": 95, "icon": "📚"
-    },
-    {
-      "id": 3, "name": "6 Tanterem", "description": "Földszinti tanterem.",
-      "floor": 0, "building": "A", "category": "Tanterem",
-      "x": 160, "y": 280, "width": 90, "height": 95, "icon": "📚"
-    },
-    {
-      "id": 4, "name": "7 Előkészítő", "description": "Földszinti előkészítő helyiség.",
+      "id": 2, "name": "007 Laboratórium", "description": "Földszinti laboratórium.",
       "floor": 0, "building": "A", "category": "SpecialisTer",
-      "x": 270, "y": 170, "width": 75, "height": 90, "icon": "🔧"
+      "x": 130, "y": 10, "width": 120, "height": 75, "icon": "🔬"
     },
     {
-      "id": 5, "name": "8 Aula", "description": "Az iskola központi aulája, rendezvények és gyülekezés helye.",
+      "id": 3, "name": "008 Előkészítő", "description": "Földszinti előkészítő helyiség a laboratórium mellett.",
+      "floor": 0, "building": "A", "category": "SpecialisTer",
+      "x": 130, "y": 95, "width": 120, "height": 75, "icon": "🔧"
+    },
+    {
+      "id": 4, "name": "009 Laboratórium", "description": "Földszinti laboratórium.",
+      "floor": 0, "building": "A", "category": "SpecialisTer",
+      "x": 130, "y": 180, "width": 120, "height": 75, "icon": "🔬"
+    },
+    {
+      "id": 5, "name": "010 Tanterem", "description": "Földszinti tanterem.",
+      "floor": 0, "building": "A", "category": "Tanterem",
+      "x": 100, "y": 265, "width": 110, "height": 70, "icon": "📚"
+    },
+    {
+      "id": 6, "name": "032 Tornatermi öltöző", "description": "Tornatermi fiú öltöző.",
+      "floor": 0, "building": "A", "category": "Egyeb",
+      "x": 220, "y": 265, "width": 110, "height": 70, "icon": "👕"
+    },
+    {
+      "id": 7, "name": "026 Akadálymentes WC", "description": "Földszinti akadálymentes mosdó.",
+      "floor": 0, "building": "A", "category": "Mosdo",
+      "x": 10, "y": 265, "width": 80, "height": 55, "icon": "♿"
+    },
+    {
+      "id": 8, "name": "037 Tornaterem", "description": "Az iskola tornacsarnoka.",
       "floor": 0, "building": "A", "category": "KozossegiTer",
-      "x": 270, "y": 280, "width": 130, "height": 95, "icon": "🏫"
+      "x": 340, "y": 265, "width": 190, "height": 200, "icon": "🏃"
     },
     {
-      "id": 6, "name": "9 Tanári szoba", "description": "Földszinti tanári szoba.",
-      "floor": 0, "building": "A", "category": "Iroda",
-      "x": 345, "y": 170, "width": 75, "height": 90, "icon": "👨‍🏫"
-    },
-    {
-      "id": 7, "name": "10 Tanterem", "description": "Földszinti tanterem.",
-      "floor": 0, "building": "A", "category": "Tanterem",
-      "x": 420, "y": 170, "width": 75, "height": 90, "icon": "📚"
-    },
-    {
-      "id": 8, "name": "13 Portás", "description": "Portás fülke, bejárat.",
-      "floor": 0, "building": "A", "category": "Iroda",
-      "x": 435, "y": 395, "width": 60, "height": 45, "icon": "🚪"
-    },
-    {
-      "id": 9, "name": "15 Tanterem", "description": "Földszinti tanterem.",
-      "floor": 0, "building": "A", "category": "Tanterem",
-      "x": 490, "y": 280, "width": 90, "height": 95, "icon": "📚"
-    },
-    {
-      "id": 10, "name": "16 Tanterem", "description": "Földszinti tanterem.",
-      "floor": 0, "building": "A", "category": "Tanterem",
-      "x": 580, "y": 280, "width": 90, "height": 95, "icon": "📚"
-    },
-    {
-      "id": 11, "name": "17 Tanterem", "description": "Földszinti tanterem.",
-      "floor": 0, "building": "A", "category": "Tanterem",
-      "x": 710, "y": 300, "width": 70, "height": 75, "icon": "📚"
-    },
-    {
-      "id": 12, "name": "18 Tanterem", "description": "Földszinti tanterem.",
-      "floor": 0, "building": "A", "category": "Tanterem",
-      "x": 690, "y": 200, "width": 90, "height": 75, "icon": "📚"
-    },
-    {
-      "id": 13, "name": "19 Tanári szoba", "description": "Földszinti tanári szoba.",
-      "floor": 0, "building": "A", "category": "Iroda",
-      "x": 740, "y": 105, "width": 70, "height": 90, "icon": "👨‍🏫"
-    },
-    {
-      "id": 14, "name": "20 Tanterem", "description": "Földszinti tanterem.",
-      "floor": 0, "building": "A", "category": "Tanterem",
-      "x": 670, "y": 20, "width": 70, "height": 75, "icon": "📚"
-    },
-    {
-      "id": 15, "name": "22 Könyvtár", "description": "Iskolai könyvtár.",
+      "id": 9, "name": "014 Laboratórium", "description": "Földszinti laboratórium.",
       "floor": 0, "building": "A", "category": "SpecialisTer",
-      "x": 590, "y": 20, "width": 70, "height": 75, "icon": "📖"
+      "x": 100, "y": 345, "width": 110, "height": 80, "icon": "🔬"
     },
     {
-      "id": 16, "name": "24 Női WC", "description": "Földszinti női mosdó.",
-      "floor": 0, "building": "A", "category": "Mosdo",
-      "x": 550, "y": 395, "width": 50, "height": 45, "icon": "🚺"
+      "id": 10, "name": "034 Tornatermi öltöző", "description": "Tornatermi lány öltöző.",
+      "floor": 0, "building": "A", "category": "Egyeb",
+      "x": 220, "y": 345, "width": 110, "height": 80, "icon": "👕"
     },
     {
-      "id": 17, "name": "25 Tanári WC", "description": "Földszinti tanári mosdó.",
-      "floor": 0, "building": "A", "category": "Mosdo",
-      "x": 500, "y": 395, "width": 50, "height": 45, "icon": "🚻"
+      "id": 11, "name": "027 Porta", "description": "Portás fülke, az iskola bejárata.",
+      "floor": 0, "building": "A", "category": "Iroda",
+      "x": 10, "y": 330, "width": 80, "height": 85, "icon": "🚪"
     },
     {
-      "id": 18, "name": "26 Akadálymentes WC", "description": "Földszinti akadálymentes mosdó.",
+      "id": 12, "name": "015 Tanterem", "description": "Földszinti tanterem.",
+      "floor": 0, "building": "A", "category": "Tanterem",
+      "x": 100, "y": 435, "width": 220, "height": 70, "icon": "📚"
+    },
+    {
+      "id": 13, "name": "024 Női WC", "description": "Földszinti női mosdó.",
       "floor": 0, "building": "A", "category": "Mosdo",
-      "x": 550, "y": 445, "width": 50, "height": 40, "icon": "♿"
+      "x": 10, "y": 435, "width": 80, "height": 65, "icon": "🚺"
+    },
+    {
+      "id": 14, "name": "018 Informatika", "description": "Földszinti informatika terem számítógépekkel.",
+      "floor": 0, "building": "A", "category": "SpecialisTer",
+      "x": 100, "y": 515, "width": 110, "height": 80, "icon": "💻"
+    },
+    {
+      "id": 15, "name": "023 Informatika", "description": "Földszinti informatika terem számítógépekkel.",
+      "floor": 0, "building": "A", "category": "SpecialisTer",
+      "x": 220, "y": 515, "width": 110, "height": 80, "icon": "💻"
+    },
+    {
+      "id": 16, "name": "016 Tanári szoba", "description": "Földszinti tanári szoba.",
+      "floor": 0, "building": "A", "category": "Iroda",
+      "x": 100, "y": 605, "width": 110, "height": 55, "icon": "👨‍🏫"
+    },
+    {
+      "id": 17, "name": "017 Igazgató helyettes", "description": "Igazgató helyettes irodája.",
+      "floor": 0, "building": "A", "category": "Iroda",
+      "x": 220, "y": 605, "width": 110, "height": 55, "icon": "👔"
     },
 
     {
-      "id": 19, "name": "103 Férfi WC", "description": "Első emeleti férfi mosdó.",
+      "id": 18, "name": "105 Férfi WC", "description": "Első emeleti férfi mosdó.",
       "floor": 1, "building": "A", "category": "Mosdo",
-      "x": 0, "y": 360, "width": 65, "height": 55, "icon": "🚹"
+      "x": 10, "y": 10, "width": 80, "height": 75, "icon": "🚹"
     },
     {
-      "id": 20, "name": "105 Tanterem", "description": "Első emeleti tanterem.",
+      "id": 19, "name": "107 Tanterem", "description": "Első emeleti tanterem.",
       "floor": 1, "building": "A", "category": "Tanterem",
-      "x": 70, "y": 280, "width": 90, "height": 95, "icon": "📚"
+      "x": 130, "y": 10, "width": 120, "height": 75, "icon": "📚"
     },
     {
-      "id": 21, "name": "106 Tanterem", "description": "Első emeleti tanterem.",
-      "floor": 1, "building": "A", "category": "Tanterem",
-      "x": 160, "y": 280, "width": 90, "height": 95, "icon": "📚"
-    },
-    {
-      "id": 22, "name": "107 Előkészítő", "description": "Első emeleti előkészítő helyiség.",
+      "id": 20, "name": "108 Előkészítő", "description": "Kémia előkészítő helyiség.",
       "floor": 1, "building": "A", "category": "SpecialisTer",
-      "x": 270, "y": 170, "width": 75, "height": 90, "icon": "🔧"
+      "x": 130, "y": 95, "width": 120, "height": 75, "icon": "🔧"
     },
     {
-      "id": 23, "name": "108 Kémia előadó", "description": "Kémia előadóterem kísérleti eszközökkel.",
+      "id": 21, "name": "109 Kémia labor", "description": "Kémia laboratórium kísérleti eszközökkel.",
       "floor": 1, "building": "A", "category": "SpecialisTer",
-      "x": 270, "y": 280, "width": 130, "height": 95, "icon": "🧪"
+      "x": 130, "y": 180, "width": 120, "height": 75, "icon": "🧪"
     },
     {
-      "id": 24, "name": "109 Tanári szoba", "description": "Első emeleti tanári szoba.",
+      "id": 22, "name": "110 Tanterem", "description": "Első emeleti tanterem.",
+      "floor": 1, "building": "A", "category": "Tanterem",
+      "x": 100, "y": 265, "width": 110, "height": 70, "icon": "📚"
+    },
+    {
+      "id": 23, "name": "132 Tanterem", "description": "Első emeleti tanterem.",
+      "floor": 1, "building": "A", "category": "Tanterem",
+      "x": 220, "y": 265, "width": 110, "height": 70, "icon": "📚"
+    },
+    {
+      "id": 24, "name": "126 Akadálymentes WC", "description": "Első emeleti akadálymentes mosdó.",
+      "floor": 1, "building": "A", "category": "Mosdo",
+      "x": 10, "y": 265, "width": 80, "height": 55, "icon": "♿"
+    },
+    {
+      "id": 25, "name": "114 Tanterem", "description": "Első emeleti tanterem.",
+      "floor": 1, "building": "A", "category": "Tanterem",
+      "x": 100, "y": 345, "width": 110, "height": 80, "icon": "📚"
+    },
+    {
+      "id": 26, "name": "134 Tanterem", "description": "Első emeleti tanterem.",
+      "floor": 1, "building": "A", "category": "Tanterem",
+      "x": 220, "y": 345, "width": 110, "height": 80, "icon": "📚"
+    },
+    {
+      "id": 27, "name": "127 Tanári szoba", "description": "Első emeleti tanári szoba.",
       "floor": 1, "building": "A", "category": "Iroda",
-      "x": 345, "y": 170, "width": 75, "height": 90, "icon": "👨‍🏫"
+      "x": 10, "y": 330, "width": 80, "height": 85, "icon": "👨‍🏫"
     },
     {
-      "id": 25, "name": "110 Tanterem", "description": "Első emeleti tanterem.",
+      "id": 28, "name": "115 Tanterem", "description": "Első emeleti tanterem.",
       "floor": 1, "building": "A", "category": "Tanterem",
-      "x": 420, "y": 170, "width": 75, "height": 90, "icon": "📚"
+      "x": 100, "y": 435, "width": 220, "height": 70, "icon": "📚"
     },
     {
-      "id": 26, "name": "113 Tanári szoba", "description": "Első emeleti tanári szoba.",
-      "floor": 1, "building": "A", "category": "Iroda",
-      "x": 435, "y": 395, "width": 60, "height": 45, "icon": "👨‍🏫"
-    },
-    {
-      "id": 27, "name": "115 Tanterem", "description": "Első emeleti tanterem.",
-      "floor": 1, "building": "A", "category": "Tanterem",
-      "x": 490, "y": 280, "width": 90, "height": 95, "icon": "📚"
-    },
-    {
-      "id": 28, "name": "116 Tanterem", "description": "Első emeleti tanterem.",
-      "floor": 1, "building": "A", "category": "Tanterem",
-      "x": 580, "y": 280, "width": 90, "height": 95, "icon": "📚"
-    },
-    {
-      "id": 29, "name": "117 Tanterem", "description": "Első emeleti tanterem.",
-      "floor": 1, "building": "A", "category": "Tanterem",
-      "x": 710, "y": 300, "width": 70, "height": 75, "icon": "📚"
+      "id": 29, "name": "124 Női WC", "description": "Első emeleti női mosdó.",
+      "floor": 1, "building": "A", "category": "Mosdo",
+      "x": 10, "y": 435, "width": 80, "height": 65, "icon": "🚺"
     },
     {
       "id": 30, "name": "118 Tanterem", "description": "Első emeleti tanterem.",
       "floor": 1, "building": "A", "category": "Tanterem",
-      "x": 690, "y": 200, "width": 90, "height": 75, "icon": "📚"
+      "x": 100, "y": 515, "width": 110, "height": 80, "icon": "📚"
     },
     {
-      "id": 31, "name": "119 Tanári szoba", "description": "Első emeleti tanári szoba.",
-      "floor": 1, "building": "A", "category": "Iroda",
-      "x": 740, "y": 105, "width": 70, "height": 90, "icon": "👨‍🏫"
-    },
-    {
-      "id": 32, "name": "120 Tanterem", "description": "Első emeleti tanterem.",
-      "floor": 1, "building": "A", "category": "Tanterem",
-      "x": 670, "y": 20, "width": 70, "height": 75, "icon": "📚"
-    },
-    {
-      "id": 33, "name": "122 Informatika", "description": "Első emeleti informatika terem számítógépekkel.",
+      "id": 31, "name": "123 Nyelvi labor", "description": "Nyelvi labor fejhallgatókkal és audió eszközökkel.",
       "floor": 1, "building": "A", "category": "SpecialisTer",
-      "x": 590, "y": 20, "width": 70, "height": 75, "icon": "💻"
+      "x": 220, "y": 515, "width": 110, "height": 80, "icon": "🌐"
     },
     {
-      "id": 34, "name": "124 Női WC", "description": "Első emeleti női mosdó.",
-      "floor": 1, "building": "A", "category": "Mosdo",
-      "x": 550, "y": 395, "width": 50, "height": 45, "icon": "🚺"
+      "id": 32, "name": "116 Tanári szoba", "description": "Első emeleti tanári szoba.",
+      "floor": 1, "building": "A", "category": "Iroda",
+      "x": 100, "y": 605, "width": 110, "height": 55, "icon": "👨‍🏫"
     },
     {
-      "id": 35, "name": "125 Tanári WC", "description": "Első emeleti tanári mosdó.",
-      "floor": 1, "building": "A", "category": "Mosdo",
-      "x": 500, "y": 395, "width": 50, "height": 45, "icon": "🚻"
-    },
-    {
-      "id": 36, "name": "126 Akadálymentes WC", "description": "Első emeleti akadálymentes mosdó.",
-      "floor": 1, "building": "A", "category": "Mosdo",
-      "x": 550, "y": 445, "width": 50, "height": 40, "icon": "♿"
+      "id": 33, "name": "117 Tanári szoba", "description": "Első emeleti tanári szoba.",
+      "floor": 1, "building": "A", "category": "Iroda",
+      "x": 220, "y": 605, "width": 110, "height": 55, "icon": "👨‍🏫"
     },
 
     {
-      "id": 37, "name": "203 Férfi WC", "description": "Második emeleti férfi mosdó.",
+      "id": 34, "name": "205 Férfi WC", "description": "Második emeleti férfi mosdó.",
       "floor": 2, "building": "A", "category": "Mosdo",
-      "x": 0, "y": 360, "width": 65, "height": 55, "icon": "🚹"
+      "x": 10, "y": 10, "width": 80, "height": 75, "icon": "🚹"
     },
     {
-      "id": 38, "name": "205 Tanterem", "description": "Második emeleti tanterem.",
+      "id": 35, "name": "207 Tanterem", "description": "Második emeleti tanterem.",
       "floor": 2, "building": "A", "category": "Tanterem",
-      "x": 70, "y": 280, "width": 90, "height": 95, "icon": "📚"
+      "x": 130, "y": 10, "width": 120, "height": 75, "icon": "📚"
     },
     {
-      "id": 39, "name": "206 Tanterem", "description": "Második emeleti tanterem.",
-      "floor": 2, "building": "A", "category": "Tanterem",
-      "x": 160, "y": 280, "width": 90, "height": 95, "icon": "📚"
-    },
-    {
-      "id": 40, "name": "207 Előkészítő", "description": "Fizika előkészítő helyiség.",
+      "id": 36, "name": "208 Előkészítő", "description": "Fizika előkészítő helyiség.",
       "floor": 2, "building": "A", "category": "SpecialisTer",
-      "x": 270, "y": 170, "width": 75, "height": 90, "icon": "🔧"
+      "x": 130, "y": 95, "width": 120, "height": 75, "icon": "🔧"
     },
     {
-      "id": 41, "name": "208 Fizika előadó", "description": "Fizika előadóterem kísérleti eszközökkel.",
+      "id": 37, "name": "209 Fizika labor", "description": "Fizika laboratórium kísérleti eszközökkel.",
       "floor": 2, "building": "A", "category": "SpecialisTer",
-      "x": 270, "y": 280, "width": 130, "height": 95, "icon": "⚡"
+      "x": 130, "y": 180, "width": 120, "height": 75, "icon": "⚡"
     },
     {
-      "id": 42, "name": "209 Tanári szoba", "description": "Második emeleti tanári szoba.",
+      "id": 38, "name": "210 Tanterem", "description": "Második emeleti tanterem.",
+      "floor": 2, "building": "A", "category": "Tanterem",
+      "x": 100, "y": 265, "width": 110, "height": 70, "icon": "📚"
+    },
+    {
+      "id": 39, "name": "232 Tanterem", "description": "Második emeleti tanterem.",
+      "floor": 2, "building": "A", "category": "Tanterem",
+      "x": 220, "y": 265, "width": 110, "height": 70, "icon": "📚"
+    },
+    {
+      "id": 40, "name": "226 Akadálymentes WC", "description": "Második emeleti akadálymentes mosdó.",
+      "floor": 2, "building": "A", "category": "Mosdo",
+      "x": 10, "y": 265, "width": 80, "height": 55, "icon": "♿"
+    },
+    {
+      "id": 41, "name": "214 Tanterem", "description": "Második emeleti tanterem.",
+      "floor": 2, "building": "A", "category": "Tanterem",
+      "x": 100, "y": 345, "width": 110, "height": 80, "icon": "📚"
+    },
+    {
+      "id": 42, "name": "234 Tanterem", "description": "Második emeleti tanterem.",
+      "floor": 2, "building": "A", "category": "Tanterem",
+      "x": 220, "y": 345, "width": 110, "height": 80, "icon": "📚"
+    },
+    {
+      "id": 43, "name": "227 Tanári szoba", "description": "Második emeleti tanári szoba.",
       "floor": 2, "building": "A", "category": "Iroda",
-      "x": 345, "y": 170, "width": 75, "height": 90, "icon": "👨‍🏫"
+      "x": 10, "y": 330, "width": 80, "height": 85, "icon": "👨‍🏫"
     },
     {
-      "id": 43, "name": "210 Tanterem", "description": "Második emeleti tanterem.",
+      "id": 44, "name": "215 Tanterem", "description": "Második emeleti tanterem.",
       "floor": 2, "building": "A", "category": "Tanterem",
-      "x": 420, "y": 170, "width": 75, "height": 90, "icon": "📚"
+      "x": 100, "y": 435, "width": 220, "height": 70, "icon": "📚"
     },
     {
-      "id": 44, "name": "213 Tanári szoba", "description": "Második emeleti tanári szoba a lépcső mellett.",
-      "floor": 2, "building": "A", "category": "Iroda",
-      "x": 435, "y": 395, "width": 60, "height": 45, "icon": "👨‍🏫"
+      "id": 45, "name": "224 Női WC", "description": "Második emeleti női mosdó.",
+      "floor": 2, "building": "A", "category": "Mosdo",
+      "x": 10, "y": 435, "width": 80, "height": 65, "icon": "🚺"
     },
     {
-      "id": 45, "name": "215 Tanterem", "description": "Második emeleti tanterem.",
-      "floor": 2, "building": "A", "category": "Tanterem",
-      "x": 490, "y": 280, "width": 90, "height": 95, "icon": "📚"
-    },
-    {
-      "id": 46, "name": "216 Tanterem", "description": "Második emeleti tanterem.",
-      "floor": 2, "building": "A", "category": "Tanterem",
-      "x": 580, "y": 280, "width": 90, "height": 95, "icon": "📚"
-    },
-    {
-      "id": 47, "name": "217 Tanterem", "description": "Második emeleti tanterem.",
-      "floor": 2, "building": "A", "category": "Tanterem",
-      "x": 710, "y": 300, "width": 70, "height": 75, "icon": "📚"
-    },
-    {
-      "id": 48, "name": "218 Tanterem", "description": "Második emeleti tanterem a jobb szárnyban.",
-      "floor": 2, "building": "A", "category": "Tanterem",
-      "x": 690, "y": 200, "width": 90, "height": 75, "icon": "📚"
-    },
-    {
-      "id": 49, "name": "219 Tanári szoba", "description": "Második emeleti tanári szoba a jobb szárnyban.",
-      "floor": 2, "building": "A", "category": "Iroda",
-      "x": 740, "y": 105, "width": 70, "height": 90, "icon": "👨‍🏫"
-    },
-    {
-      "id": 50, "name": "220 Tanterem", "description": "Második emeleti tanterem a jobb szárny tetején.",
-      "floor": 2, "building": "A", "category": "Tanterem",
-      "x": 670, "y": 20, "width": 70, "height": 75, "icon": "📚"
-    },
-    {
-      "id": 51, "name": "222 Informatika", "description": "Informatika terem számítógépekkel.",
+      "id": 46, "name": "218 Rajzterem", "description": "Rajzterem művészeti eszközökkel.",
       "floor": 2, "building": "A", "category": "SpecialisTer",
-      "x": 590, "y": 20, "width": 70, "height": 75, "icon": "💻"
+      "x": 100, "y": 515, "width": 110, "height": 80, "icon": "🎨"
     },
     {
-      "id": 52, "name": "224 Női WC", "description": "Második emeleti női mosdó.",
-      "floor": 2, "building": "A", "category": "Mosdo",
-      "x": 550, "y": 395, "width": 50, "height": 45, "icon": "🚺"
+      "id": 47, "name": "223 Informatika", "description": "Második emeleti informatika terem számítógépekkel.",
+      "floor": 2, "building": "A", "category": "SpecialisTer",
+      "x": 220, "y": 515, "width": 110, "height": 80, "icon": "💻"
     },
     {
-      "id": 53, "name": "225 Tanári WC", "description": "Második emeleti tanári mosdó.",
-      "floor": 2, "building": "A", "category": "Mosdo",
-      "x": 500, "y": 395, "width": 50, "height": 45, "icon": "🚻"
+      "id": 48, "name": "216 Tanári szoba", "description": "Második emeleti tanári szoba.",
+      "floor": 2, "building": "A", "category": "Iroda",
+      "x": 100, "y": 605, "width": 110, "height": 55, "icon": "👨‍🏫"
     },
     {
-      "id": 54, "name": "226 Akadálymentes WC", "description": "Második emeleti akadálymentes mosdó.",
-      "floor": 2, "building": "A", "category": "Mosdo",
-      "x": 550, "y": 445, "width": 50, "height": 40, "icon": "♿"
+      "id": 49, "name": "217 Tanári szoba", "description": "Második emeleti tanári szoba.",
+      "floor": 2, "building": "A", "category": "Iroda",
+      "x": 220, "y": 605, "width": 110, "height": 55, "icon": "👨‍🏫"
     }
   ]
 }

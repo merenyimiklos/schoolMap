@@ -42,7 +42,7 @@
                     <TextBlock Text="🏫" FontSize="36" VerticalAlignment="Center" Margin="0,0,12,0" />
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock Text="Iskola Térkép" Style="{StaticResource TitleText}" />
-                        <TextBlock Text="'A' Épület – 3D Nézet"
+                        <TextBlock Text="'A' Épület – Interaktív Térkép"
                                    FontSize="13" Foreground="{StaticResource AccentLightBrush}"
                                    Margin="0,-2,0,0" />
                     </StackPanel>

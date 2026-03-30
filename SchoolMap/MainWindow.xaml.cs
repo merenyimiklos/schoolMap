@@ -79,15 +79,16 @@ public partial class MainWindow : Window
 
     /// <summary>
     /// A 3D izometrikus térkép rajzolása.
+    /// Csak a kiválasztott emelet helyiségeit jeleníti meg.
     /// </summary>
     private void DrawMap()
     {
         MapCanvas.Children.Clear();
 
         var allRooms = _viewModel.AllRooms;
-        var floors = _viewModel.Floors;
+        var selectedFloor = _viewModel.SelectedFloor;
 
-        if (allRooms == null || allRooms.Count == 0 || floors == null || floors.Count == 0)
+        if (allRooms == null || allRooms.Count == 0 || selectedFloor == null)
             return;
 
         var canvasWidth = MapCanvas.ActualWidth;
@@ -96,9 +97,14 @@ public partial class MainWindow : Window
         if (canvasWidth <= 0 || canvasHeight <= 0)
             return;
 
-        // Calculate scale to fit all floors
+        // Only show rooms on the selected floor
+        var floorRooms = allRooms.Where(r => r.Floor == selectedFloor.Level).ToList();
+        if (floorRooms.Count == 0)
+            return;
+
+        // Calculate scale to fit the selected floor
         double maxX = 0, maxY = 0;
-        foreach (var room in allRooms)
+        foreach (var room in floorRooms)
         {
             var rx = room.X + room.Width;
             var ry = room.Y + room.Height;
@@ -106,19 +112,13 @@ public partial class MainWindow : Window
             if (ry > maxY) maxY = ry;
         }
 
-        int maxLevel = floors.Max(f => f.Level);
-
-        // Calculate bounding box of the isometric projection
+        // Calculate bounding box of the isometric projection (single floor at level 0)
         var corners = new[]
         {
             IsoProject(0, 0, 0, 1, 0, 0),
             IsoProject(maxX, 0, 0, 1, 0, 0),
             IsoProject(0, maxY, 0, 1, 0, 0),
             IsoProject(maxX, maxY, 0, 1, 0, 0),
-            IsoProject(0, 0, maxLevel, 1, 0, 0),
-            IsoProject(maxX, 0, maxLevel, 1, 0, 0),
-            IsoProject(0, maxY, maxLevel, 1, 0, 0),
-            IsoProject(maxX, maxY, maxLevel, 1, 0, 0),
         };
 
         double minSx = corners.Min(p => p.X);
@@ -138,25 +138,17 @@ public partial class MainWindow : Window
         double offsetX = (canvasWidth - projWidth * scale) / 2 - minSx * scale;
         double offsetY = (canvasHeight - projHeight * scale) / 2 - minSy * scale;
 
-        // Draw floors from bottom to top
-        var sortedFloors = floors.OrderBy(f => f.Level).ToList();
-        foreach (var floor in sortedFloors)
+        // Draw floor slab for the selected floor
+        DrawFloorSlab(maxX + 20, maxY + 20, 0, scale, offsetX, offsetY, true, 1.0);
+
+        // Draw floor label
+        DrawFloorLabel(selectedFloor, maxX + 20, maxY + 20, scale, offsetX, offsetY, true);
+
+        // Draw rooms on the selected floor
+        var sortedRooms = floorRooms.OrderBy(r => r.Y).ThenBy(r => r.X);
+        foreach (var room in sortedRooms)
         {
-            bool isSelectedFloor = _viewModel.SelectedFloor != null && _viewModel.SelectedFloor.Level == floor.Level;
-            double floorOpacity = isSelectedFloor ? 1.0 : 0.55;
-
-            // Draw floor slab
-            DrawFloorSlab(maxX + 20, maxY + 20, floor.Level, scale, offsetX, offsetY, isSelectedFloor, floorOpacity);
-
-            // Draw floor label
-            DrawFloorLabel(floor, maxX + 20, maxY + 20, scale, offsetX, offsetY, isSelectedFloor);
-
-            // Draw rooms on this floor
-            var floorRooms = allRooms.Where(r => r.Floor == floor.Level).OrderBy(r => r.Y).ThenBy(r => r.X);
-            foreach (var room in floorRooms)
-            {
-                DrawRoom3D(room, floor.Level, scale, offsetX, offsetY, floorOpacity);
-            }
+            DrawRoom3D(room, 0, scale, offsetX, offsetY, 1.0);
         }
     }
 

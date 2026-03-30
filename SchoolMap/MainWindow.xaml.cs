@@ -18,6 +18,12 @@ public partial class MainWindow : Window
 {
     private readonly MainViewModel _viewModel;
 
+    // Térkép rajzolási konstansok
+    private const double MapMargin = 30;
+    private const double RoomCornerRadius = 8;
+    private const double MinFontSize = 10;
+    private const double FontSizeRatio = 0.25;
+
     public MainWindow()
     {
         InitializeComponent();
@@ -85,9 +91,8 @@ public partial class MainWindow : Window
         double maxY = floorRooms.Max(r => r.Y + r.Height);
 
         // Méretezés kiszámítása – belefér a Canvas-ba margóval
-        double margin = 30;
-        double scaleX = (canvasWidth - 2 * margin) / maxX;
-        double scaleY = (canvasHeight - 2 * margin) / maxY;
+        double scaleX = (canvasWidth - 2 * MapMargin) / maxX;
+        double scaleY = (canvasHeight - 2 * MapMargin) / maxY;
         double scale = Math.Min(scaleX, scaleY);
 
         // Középre igazítás
@@ -161,8 +166,8 @@ public partial class MainWindow : Window
         {
             Width = w,
             Height = h,
-            RadiusX = 8,
-            RadiusY = 8,
+            RadiusX = RoomCornerRadius,
+            RadiusY = RoomCornerRadius,
             Fill = new SolidColorBrush(baseColor),
             Stroke = defaultStroke,
             StrokeThickness = defaultStrokeThickness,
@@ -219,7 +224,7 @@ public partial class MainWindow : Window
         var label = new TextBlock
         {
             Text = roomNumber,
-            FontSize = Math.Max(10, Math.Min(w, h) * 0.25),
+            FontSize = Math.Max(MinFontSize, Math.Min(w, h) * FontSizeRatio),
             FontWeight = FontWeights.Bold,
             Foreground = Brushes.White,
             TextAlignment = TextAlignment.Center,

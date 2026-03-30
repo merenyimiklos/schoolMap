@@ -250,7 +250,7 @@
     {
       "id": 49, "name": "217 Tanári szoba", "description": "Második emeleti tanári szoba.",
       "floor": 2, "building": "A", "category": "Iroda",
-      "x": 220, "y": 605, "width": 110, "height": 55, "icon": "👔"
+      "x": 220, "y": 605, "width": 110, "height": 55, "icon": "👨‍🏫"
     }
   ]
 }

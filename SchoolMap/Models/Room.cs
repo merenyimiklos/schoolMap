@@ -8,7 +8,7 @@ namespace SchoolMap.Models
     {
         public int Id { get; set; }
 
-        /// <summary>Helyiség neve (pl. "101-es tanterem")</summary>
+        /// <summary>Helyiség neve (pl. "208 Fizika előadó")</summary>
         public string Name { get; set; } = string.Empty;
 
         /// <summary>Rövid leírás a helyiségről</summary>
@@ -16,6 +16,9 @@ namespace SchoolMap.Models
 
         /// <summary>Emelet száma (0 = földszint)</summary>
         public int Floor { get; set; }
+
+        /// <summary>Épület azonosító (pl. "A", "B")</summary>
+        public string Building { get; set; } = "A";
 
         /// <summary>Helyiség kategóriája</summary>
         public Category Category { get; set; }

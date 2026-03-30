@@ -34,6 +34,9 @@ namespace SchoolMap.Services
         [JsonPropertyName("floor")]
         public int Floor { get; set; }
 
+        [JsonPropertyName("building")]
+        public string Building { get; set; } = "A";
+
         [JsonPropertyName("category")]
         public string Category { get; set; } = string.Empty;
 
@@ -57,11 +60,6 @@ namespace SchoolMap.Services
     /// Adatszolgáltató osztály – jelenleg JSON fájlból olvas.
     /// Később ez az osztály cserélhető adatbázisos megvalósításra
     /// anélkül, hogy a ViewModel-eket módosítani kellene.
-    /// 
-    /// Bővítési lehetőség:
-    ///   - IDataService interfész kinyerése
-    ///   - Entity Framework vagy Dapper alapú implementáció
-    ///   - Dependency Injection a ViewModelekbe
     /// </summary>
     public class DataService
     {
@@ -77,7 +75,6 @@ namespace SchoolMap.Services
 
             if (!File.Exists(jsonPath))
             {
-                // Ha nincs JSON fájl, használjunk üres listákat
                 _rooms = new List<Room>();
                 _floors = new List<Floor>();
                 return;
@@ -95,6 +92,7 @@ namespace SchoolMap.Services
                     Name = dto.Name,
                     Description = dto.Description,
                     Floor = dto.Floor,
+                    Building = dto.Building,
                     Category = Enum.TryParse<Category>(dto.Category, out var cat) ? cat : Category.Egyeb,
                     X = dto.X,
                     Y = dto.Y,

@@ -13,12 +13,20 @@ namespace SchoolMap.ViewModels
     {
         private readonly DataService _dataService;
 
-        // === Helyiségek listája (a térképen és az oldalsó listában) ===
+        // === Szűrt helyiségek listája (oldalsó listában) ===
         private ObservableCollection<Room> _rooms = new();
         public ObservableCollection<Room> Rooms
         {
             get => _rooms;
             set => SetProperty(ref _rooms, value);
+        }
+
+        // === Összes helyiség (3D térképhez – minden emelet) ===
+        private List<Room> _allRooms = new();
+        public List<Room> AllRooms
+        {
+            get => _allRooms;
+            set => SetProperty(ref _allRooms, value);
         }
 
         // === Emeletek listája (emeletváltó gombokhoz) ===
@@ -48,13 +56,11 @@ namespace SchoolMap.ViewModels
             get => _selectedRoom;
             set
             {
-                // Előző kijelölés törlése
                 if (_selectedRoom != null)
                     _selectedRoom.IsHighlighted = false;
 
                 if (SetProperty(ref _selectedRoom, value))
                 {
-                    // Új kijelölés beállítása
                     if (_selectedRoom != null)
                         _selectedRoom.IsHighlighted = true;
 
@@ -62,7 +68,6 @@ namespace SchoolMap.ViewModels
                     OnPropertyChanged(nameof(SelectedRoomFloorName));
                     OnPropertyChanged(nameof(SelectedRoomCategoryName));
 
-                    // Térkép újrarajzolásának kérése
                     RefreshMap();
                 }
             }
@@ -136,22 +141,19 @@ namespace SchoolMap.ViewModels
             _dataService = new DataService();
             _dataService.LoadData();
 
-            // Parancsok inicializálása
             SelectRoomCommand = new RelayCommand(OnSelectRoom);
             SelectFloorCommand = new RelayCommand(OnSelectFloor);
             SelectCategoryCommand = new RelayCommand(OnSelectCategory);
             ClearFilterCommand = new RelayCommand(_ => ClearFilters());
             ClearSelectionCommand = new RelayCommand(_ => SelectedRoom = null);
 
-            // Kategória lista felépítése
             Categories.Add(new CategoryItem { Category = null, DisplayName = "🏠  Mind", IsSelected = true });
             Categories.Add(new CategoryItem { Category = Category.Tanterem, DisplayName = "📚  Tantermek" });
-            Categories.Add(new CategoryItem { Category = Category.Iroda, DisplayName = "💼  Irodák" });
+            Categories.Add(new CategoryItem { Category = Category.Iroda, DisplayName = "💼  Tanári" });
             Categories.Add(new CategoryItem { Category = Category.KozossegiTer, DisplayName = "☕  Közösségi" });
             Categories.Add(new CategoryItem { Category = Category.Mosdo, DisplayName = "🚻  Mosdók" });
             Categories.Add(new CategoryItem { Category = Category.SpecialisTer, DisplayName = "🔬  Speciális" });
 
-            // Adatok betöltése
             LoadData();
         }
 
@@ -159,8 +161,8 @@ namespace SchoolMap.ViewModels
         private void LoadData()
         {
             Floors = new ObservableCollection<Floor>(_dataService.GetAllFloors());
+            AllRooms = _dataService.GetAllRooms();
 
-            // Alapértelmezett emelet: földszint
             SelectedFloor = Floors.FirstOrDefault(f => f.Level == 0) ?? Floors.FirstOrDefault();
 
             ApplyFilters();
@@ -168,7 +170,7 @@ namespace SchoolMap.ViewModels
 
         /// <summary>
         /// Szűrők alkalmazása: emelet + keresés + kategória.
-        /// Ez frissíti a megjelenített helyiségek listáját.
+        /// Ez frissíti a szűrt listát, a 3D térkép minden emeletet mutat.
         /// </summary>
         private void ApplyFilters()
         {
@@ -195,11 +197,19 @@ namespace SchoolMap.ViewModels
             RefreshMap();
         }
 
-        /// <summary>Helyiség kiválasztása (kattintás a térképen vagy listában).</summary>
+        /// <summary>Helyiség kiválasztása.</summary>
         private void OnSelectRoom(object? parameter)
         {
             if (parameter is Room room)
             {
+                // Auto-switch to the room's floor
+                var roomFloor = Floors.FirstOrDefault(f => f.Level == room.Floor);
+                if (roomFloor != null && _selectedFloor != roomFloor)
+                {
+                    _selectedFloor = roomFloor;
+                    OnPropertyChanged(nameof(SelectedFloor));
+                    ApplyFilters();
+                }
                 SelectedRoom = room;
             }
             else if (parameter is int id)
@@ -222,7 +232,6 @@ namespace SchoolMap.ViewModels
         {
             if (parameter is CategoryItem item)
             {
-                // Kijelölés frissítése a UI-hoz
                 foreach (var cat in Categories)
                     cat.IsSelected = false;
                 item.IsSelected = true;
@@ -256,7 +265,7 @@ namespace SchoolMap.ViewModels
             return category switch
             {
                 Category.Tanterem => "Tanterem",
-                Category.Iroda => "Iroda",
+                Category.Iroda => "Tanári szoba",
                 Category.KozossegiTer => "Közösségi tér",
                 Category.Mosdo => "Mosdó",
                 Category.SpecialisTer => "Speciális terem",

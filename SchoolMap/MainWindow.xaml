@@ -6,7 +6,7 @@
         xmlns:vm="clr-namespace:SchoolMap.ViewModels"
         xmlns:conv="clr-namespace:SchoolMap.Converters"
         mc:Ignorable="d"
-        Title="🏫 Iskola Térkép – Digitális Információs Rendszer"
+        Title="🏫 Iskola Térkép – A Épület"
         WindowState="Maximized"
         WindowStyle="SingleBorderWindow"
         Background="{StaticResource SurfaceBrush}"
@@ -42,7 +42,7 @@
                     <TextBlock Text="🏫" FontSize="36" VerticalAlignment="Center" Margin="0,0,12,0" />
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock Text="Iskola Térkép" Style="{StaticResource TitleText}" />
-                        <TextBlock Text="Digitális Információs Rendszer"
+                        <TextBlock Text="&quot;A&quot; Épület – 3D Nézet"
                                    FontSize="13" Foreground="{StaticResource AccentLightBrush}"
                                    Margin="0,-2,0,0" />
                     </StackPanel>
@@ -202,6 +202,9 @@
                         <!-- Emelet info -->
                         <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
                             <TextBlock Text="📍" FontSize="16" Margin="0,0,6,0" />
+                            <TextBlock Text="&quot;A&quot; épület – "
+                                       FontSize="15" FontWeight="SemiBold"
+                                       Foreground="{StaticResource TextPrimaryBrush}" />
                             <TextBlock Text="{Binding SelectedRoomFloorName}"
                                        FontSize="15" FontWeight="SemiBold"
                                        Foreground="{StaticResource TextPrimaryBrush}" />
